@@ -63,6 +63,7 @@ class MarketControl extends React.Component {
       <React.Fragment>
         <button onClick={() => this.handleClick("schedule")}>View Schedule</button>
         <button onClick={() => this.handleClick("produce")}>View Produce</button>
+        <hr />
         {currentlyVisibleState}
       </React.Fragment>
     );

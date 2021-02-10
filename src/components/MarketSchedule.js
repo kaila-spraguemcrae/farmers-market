@@ -128,6 +128,17 @@ handleClick = (dayValue) => {
       saturdayVisibleOnPage: true
     });
   }
+  else {
+    this.setState({
+      sundayVisibleOnPage: false,
+      mondayVisibleOnPage: false,
+      tuesdayVisibleOnPage: false,
+      wednesdayVisibleOnPage: false,
+      thursdayVisibleOnPage: false,
+      fridayVisibleOnPage: false,
+      saturdayVisibleOnPage: false
+    });
+  }
 };
 
 render() {
@@ -155,7 +166,7 @@ render() {
   } else {
     currentlyVisibleState = null
   }
-  
+  console.log(this.state);
   return (
     <React.Fragment>
       {currentlyVisibleState}

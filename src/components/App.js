@@ -6,8 +6,10 @@ import MarketControl from "./MarketControl";
 function App() {
   return (
     <React.Fragment>
-      <Header />
-      <MarketControl />
+      <div className="container">
+        <Header />
+        <MarketControl />
+      </div>
     </React.Fragment>
   );
 }
