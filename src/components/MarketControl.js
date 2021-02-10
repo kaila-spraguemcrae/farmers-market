@@ -8,8 +8,8 @@ class MarketControl extends React.Component {
     super(props);
     this.state = {
       homeVisibleOnPage: true,
-      scheduleVisibleOnPage : false,
-      produceVisibleOnPage: false,
+      scheduleVisibleOnPage: false,
+      produceVisibleOnPage: false
     };
   }
 
@@ -24,11 +24,11 @@ class MarketControl extends React.Component {
       scheduleVisibleOnPage: true,
       produceVisibleOnPage: false
     })); 
-  }else if(this.state.scheduleVisibleOnPage === true && this.state.produceVisibleOnPage === false && x === "produce") {
-      this.setState(({
-        produceVisibleOnPage: true,
-        scheduleVisibleOnPage: false
-      }));
+    }else if(this.state.scheduleVisibleOnPage === true && this.state.produceVisibleOnPage === false && x === "produce") {
+    this.setState(({
+      produceVisibleOnPage: true,
+      scheduleVisibleOnPage: false
+    }));
     } else if(this.state.scheduleVisibleOnPage === false && this.state.produceVisibleOnPage === true && x === "produce") {
       this.setState(({
         produceVisibleOnPage: false,
@@ -48,19 +48,8 @@ class MarketControl extends React.Component {
       this.setState({scheduleVisibleOnPage : false,
         produceVisibleOnPage: false});
     }
-    
   }
 
-  // this.setState(prevState => ({
-  //   scheduleVisibleOnPage: !prevState.scheduleVisibleOnPage,
-  //   produceVisibleOnPage: !prevState.produceVisibleOnPage
-  // }));
-
-  // handleClickProduce = () => {
-  //   this.setState(prevState => ({
-  //     produceVisibleOnPage: !prevState.produceVisibleOnPage
-  //   }));
-  // }
 
   render() {
     let currentlyVisibleState = null;
